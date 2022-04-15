@@ -13,8 +13,22 @@
                 document.write(frase);
                 saltarLinea();
         }
+
 var numeroPensado = 5;
 var numeroLanzado = parseInt(prompt("Ingrese un número entre 0 y 10"));
+
+//condicion de acierto
+if(numeroPensado == numeroLanzado){
+	imprimir("Usted acertó");
+}
+
+//condicion de fallo
+if(numeroPensado != numeroLanzado){
+	imprimir("Usted erro, el número pensado era: "+numeroPensado);
+}
+
+
+
 
 </script>
 
