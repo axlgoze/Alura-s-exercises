@@ -12,7 +12,7 @@
         document.write("<br>");    
         document.write("<br>");    
         document.write("<br>");    
-    }  
+    }
 
     function imprimir(frase) {
         document.write(frase);
@@ -26,6 +26,9 @@
     var numeroLanzado = parseInt(prompt("Ingresa un número entre 0 y 10"));
     numeroPensado = sortea(10);
 
+    if(numeroLanzado>10){
+	alert("Por favor ingresa un número entre 0 y 10")
+    }else{
     if (numeroPensado == numeroLanzado){
         imprimir("usted acertó")
     }
@@ -35,10 +38,7 @@
     }else{
 	imprimir("usted erró, el número pensado era menor.")
     }
-
+}
     console.log(numeroPensado);
 
 </script>
-
-
-
