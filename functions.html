@@ -1,0 +1,47 @@
+<!-- basic base for an html docs -->
+<meta charset="UTF-8">
+    <h1>functions document</h1> 
+    <p>functions helps us to recive an input and return a different output, we can reuse a function any time as we want.</p>
+    
+<script>
+    
+    //function to create a breakline
+    function saltarLinea(){
+        
+        document.write("<br><br><br>");
+    }
+    //function to print messages
+    function imprimir(mensaje){
+        console.log(mensaje);
+        document.write(mensaje);
+    }
+    //function to add numbers
+    function sumar(numero1,numero2){
+        resultado = numero1+numero2;
+        document.write(resultado);
+    }
+    
+    saltarLinea();
+    document.write("la suma de " + 12 + " y "+ 12 + " es:");
+    saltarLinea();
+    sumar(12,12);
+    saltarLinea();
+
+
+    alert("I'm a function");
+    document.write("I'm another funciton and I print things on the screen");
+    saltarLinea();
+    document.write("The function works ! ");
+    saltarLinea();
+    document.write("another breakline");
+    
+    saltarLinea();
+    imprimir("hola my friends");
+    
+</script>
+
+<style>
+    h1{
+        color: darkgoldenrod;
+    }
+</style>

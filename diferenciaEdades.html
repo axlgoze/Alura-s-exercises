@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<h1>This program calculates the difference of the years between you and a friend</h1>
+
+<script>
+    //function that prints two breaklines
+    function saltarLinea(){
+        document.write("<br><br>");
+    }
+    
+
+    //function to print the results
+    function imprimirDiferencia(n1,n2){
+        var diff = n1 - n2;
+        return diff;
+    }
+    //varaible declaration
+        var myAge=30;
+        var friendAge=100;
+        //printing results
+        document.write("The difference between my  "+ myAge + " years old, and the "+friendAge+ " years old of my friend is: ");
+        saltarLinea();
+        document.write(imprimirDiferencia(myAge,friendAge) + " years.");
+
+</script>
