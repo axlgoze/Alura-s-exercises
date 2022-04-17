@@ -19,15 +19,15 @@
         saltarLinea();
     }
 
-    function sortea() {
-	var numeroSorteo = Math.round(Math.random()*10);
+    function sortea(n) {
+	var numeroSorteo = Math.round(Math.random()*n);
         console.log(numeroSorteo);
+	return numeroSorteo;
         saltarLinea();
     }
 
-    var numeroPensado = sortea(parseInt(prompt("Ingresa un número entre 0 y 10"));
-    
-    sortea();
+    var numeroLanzado = parseInt(prompt("Ingresa un número entre 0 y 10"));
+    numeroPensado = sortea(10);
 
     if (numeroPensado == numeroLanzado){
         imprimir("usted acertó")
