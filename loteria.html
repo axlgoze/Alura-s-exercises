@@ -20,10 +20,8 @@
     }
 
     function sortea(n) {
-	var numeroSorteo = Math.round(Math.random()*n);
-        console.log(numeroSorteo);
-	return numeroSorteo;
-        saltarLinea();
+	return Math.round(Math.random()*n);
+        console.log(numeroSorteo);        
     }
 
     var numeroLanzado = parseInt(prompt("Ingresa un número entre 0 y 10"));
