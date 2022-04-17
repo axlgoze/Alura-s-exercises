@@ -4,7 +4,7 @@
 
 <script>
     function saltarLinea() {
-        document.write("<br>");
+        document.write("<br><br>");
     }
 
     function imprimir(frase) {
@@ -13,13 +13,24 @@
     }
 
     var edad = parseInt(prompt("¿Cuál es tu edad?"));
-    var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+	if(edad < 18){
+		imprimir("Lo sentimos no cumple con la edad minimia para conducir");
+	}else{
+		var tieneLicencia = prompt("¿Tienes licencia? Responde S o N");
+		if(tieneLicencia.toLowerCase() != "s"){
+			imprimir("Lo sentimos cumple con la edad minimia pero no cuenta con licentia para conducir");			
+		}else{
+			imprimir("Felicidades usted puede conducir");
+		}
+	}
+
+
 
 </script>
 
 <style>
 *{
 	background-color: gold;
-	color: white;
+	color: black;
 }
 </style>
