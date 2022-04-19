@@ -17,13 +17,16 @@ function saltarLinea(){
     
     var numeroIntegrantes = parseInt(prompt("Ingresa la cantidad de miembros de tu familia"))
     var contador=1
+    var sumaEdades=0
     while(contador <= numeroIntegrantes){
-	var sumaEdades = 0
+	
 	edad = parseInt(prompt("Ingresa la edad del integrante número "+contador));
-	contador++;
+	
 	sumaEdades=sumaEdades+edad
+	contador++;
 	console.log(edad)
-	console.log(sumaEdades)
+
     }
+	console.log(sumaEdades)
 
 </script>
