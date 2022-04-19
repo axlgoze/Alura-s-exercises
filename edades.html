@@ -14,6 +14,13 @@ function saltarLinea(){
         document.write(frase);
         saltarLinea();
     }
-
+    
+    var numeroIntegrantes = parseInt(prompt("Ingresa la cantidad de miembros de tu familia"))
+    var contador=1
+    while(contador <= numeroIntegrantes){
+	edad = parseInt(prompt("Ingresa la edad del integrante número "+contador));
+	contador++;
+	console.log(edad)
+    }
 
 </script>
