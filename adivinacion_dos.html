@@ -1,6 +1,6 @@
 <!--   <></>   juego de adivinación -->
 <meta charset="UTF-8">
-<h1>Juego de adivinación.</h1>
+<h1>Juego de adivinación con ciclo while.</h1>
 
 <script>
         function saltarLinea(){
@@ -19,7 +19,7 @@
 	
 	while(contador<=intentos){
 	var numeroLanzado = parseInt(prompt("Ingrese un número entre 0 y 10"))
-	if (numeroPensado == numeroLanzado)
+	if (numeroPensado == numeroLanzado){
 		alert("Usted acerto")
 	}else{
 		alert("Usted erró, el número pensado fue: "+numeroPensado)
