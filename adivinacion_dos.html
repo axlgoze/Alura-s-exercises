@@ -20,7 +20,9 @@
 	while(contador<=intentos){
 	var numeroLanzado = parseInt(prompt("Ingrese un número entre 0 y 10"))
 	if (numeroPensado == numeroLanzado){
-		alert("Usted acerto")
+		alert("Felicidades, Usted acerto en el intento número: "+intentos)
+		//comando para terminar el proceso del código
+		break;
 	}else{
 		alert("Usted erró, el número pensado fue: "+numeroPensado)
 	} contador++;
