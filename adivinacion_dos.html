@@ -21,12 +21,18 @@
 	var numeroLanzado = parseInt(prompt("Ingrese un número entre 0 y 10"))
 	if (numeroPensado == numeroLanzado){
 		alert("Felicidades, Usted acerto en el intento número: "+intentos)
-		//comando para terminar el proceso del código
+		//comando para terminar el proceso del ciclo while
 		break;
 	}else{
 		alert("Usted erró, el número pensado fue: "+numeroPensado)
 	} contador++;
 }
+
+	if(numeroPensado==numeroLanzado){
+		imprimir("El numero pensado fue: "+numeroPensado+ " y usted eligio: "+numeroLanzado)
+	}
+
+imprimir("Gracias por jugar.")
 
 </script>
 
