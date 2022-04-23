@@ -1,0 +1,20 @@
+<!--Progrma que muestra lo escrito en un alert -->
+<meta charset "URF-8">
+<h1>Escribe algo y te lo mostraré en un alert !</h1>
+
+<input/>
+<button>Mostrar texto</button>
+
+<script>
+var input = document.querySelector("input");
+input.focus();
+var button = document.querySelector("button");
+button.onclick = muestraTexto;
+
+function muestraTexto(){
+	alert(input.value)
+	console.log(input.value)
+	input.value =" "
+	input.focus();
+}
+</script>
