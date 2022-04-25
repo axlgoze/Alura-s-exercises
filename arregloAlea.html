@@ -1,0 +1,46 @@
+<!--Aprendiendo conceptos de arreglos-->
+<meta charset "URF-8">
+<h1>Arrays</h1>
+
+<input/>
+<button>Verificar si acertó con el secreto</button>
+<script>
+	
+	var secreto = [3,5,7,9]; //coleccion de numeros
+		
+	var input = document.querySelector("input") //stores value of the html object
+	input.focus()
+
+	function verificar(){ 
+		var encontrado=false;	
+	 for(var posicion=0; posicion<secreto.length; posicion++){
+
+	
+	  if(parseInt(input.value) == secreto[posicion]){
+	    	  alert("Usted Acertó")
+		  encontrado = true;
+		  break; //si encuentra valor ya no necesito validar los demas numeros del arreglo
+  	  }
+	 }
+
+	  if(encontrado == false){
+		  alert("Usted erró")
+	  }
+
+	  input.value = " " //borra el valor insertado cada vez se completa la función
+	  input.focus(); //permite focalizar el cursor en la caja de input
+	  console.log(secreto)
+	 
+	}
+	var boton = document.querySelector("button");
+	boton.onclick = verificar;
+
+</script>
+
+
+<style>
+	html{
+		background-color: #125B50;
+		color: #F8B400;
+	}
+</style>
