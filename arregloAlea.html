@@ -5,12 +5,16 @@
 <input/>
 <button>Verificar si acertó con el secreto</button>
 <script>
+	function aleatorio(){
+		return Math.round(Math.random()*10)
+	}
+
 	
 	var secreto = []; //arreglo vacio
-	secreto.push(3); //El metodo push permite agregar elementos 
-	secreto.push(5); // un arreglo.
-	secreto.push(7);
-	secreto.push(9);
+	secreto.push(aleatorio()); //El metodo push permite agregar elementos 
+	secreto.push(aleatorio()); // un arreglo.
+	secreto.push(aleatorio());
+	secreto.push(aleatorio());
 		
 	var input = document.querySelector("input") //stores value of the html object
 	input.focus()
