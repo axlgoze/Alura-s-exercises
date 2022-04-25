@@ -13,12 +13,14 @@
 		var contador = 1;
 		var secreto = []; //variable de contexto local, no afecta otras variables con el mismo nombre
 		while(contador <= cantidad){
-						
+			numeroAleatorio = aleatorio();
+			contador++;
 		}
-		numeroAleatorio = aleatorio();
+
+		return secreto;
 	}
 	
-	var secreto = sorteaNum();
+	var secreto = sorteaNum(4);
 					
 	secreto.push(aleatorio()); //El metodo push permite agregar elementos 
 	secreto.push(aleatorio()); // un arreglo.
