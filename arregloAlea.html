@@ -13,15 +13,20 @@
 		//Crear arreglo vacio
 		var secreto = []; //variable de contexto local, no afecta otras variables con el mismo nombre
 		var contador = 1;
+
+
 		//ciclo para llenar el arreglo
 		while(contador <= cantidad){
 			//genera un numero aleatorio con la funcion y alamacenalo en numeroAleatorio
 			numeroAleatorio = aleatorio();
+
+						
 			//método para ingresar numero al arreglo
-			secretos.push(numeroAleatorio);
+			secreto.push(numeroAleatorio);
 			contador++;
 		}
 		//regresa arreglo lleno
+		console.log(secreto)
 		return secreto;
 	}
 	
