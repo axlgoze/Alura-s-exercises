@@ -19,16 +19,20 @@
 		while(contador <= cantidad){
 			//genera un numero aleatorio con la funcion y alamacenalo en numeroAleatorio
 			var numeroAleatorio = aleatorio();
-			/*
+			
 			for(var posicion=0;poscion<secreto.length;posicion++){
 				if(numeroAleatorio==secreto[posicion]){
-					
+					encontrado = true;		
 				}
 			}
-			*/
+			
+			if(encontrado==false){
+				secreto.push(numeroAleatorio)
+			}
+			
 						
 			//método para ingresar numero al arreglo
-			secreto.push(numeroAleatorio);
+			//secreto.push(numeroAleatorio);
 			contador++;
 		}
 		//regresa arreglo lleno
