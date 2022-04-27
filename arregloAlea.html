@@ -17,23 +17,25 @@
 
 		//ciclo para llenar el arreglo
 		while(contador <= cantidad){
+
 			//genera un numero aleatorio con la funcion y alamacenalo en numeroAleatorio
 			var numeroAleatorio = aleatorio();
-			
-			for(var posicion=0;poscion<secreto.length;posicion++){
+			console.log(numeroAleatorio);
+			var encontrado=false;
+
+			for(var posicion=0;posicion<secreto.length;posicion++){
 				if(numeroAleatorio==secreto[posicion]){
-					encontrado = true;		
+					encontrado = true;
+					break; //si true no verifica lo demas
 				}
 			}
 			
 			if(encontrado==false){
+				//método para ingresar numero al arreglo
 				secreto.push(numeroAleatorio)
+				contador++;
 			}
-			
-						
-			//método para ingresar numero al arreglo
-			//secreto.push(numeroAleatorio);
-			contador++;
+
 		}
 		//regresa arreglo lleno
 		console.log(secreto)
