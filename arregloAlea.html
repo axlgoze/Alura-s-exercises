@@ -18,8 +18,14 @@
 		//ciclo para llenar el arreglo
 		while(contador <= cantidad){
 			//genera un numero aleatorio con la funcion y alamacenalo en numeroAleatorio
-			numeroAleatorio = aleatorio();
-
+			var numeroAleatorio = aleatorio();
+			/*
+			for(var posicion=0;poscion<secreto.length;posicion++){
+				if(numeroAleatorio==secreto[posicion]){
+					
+				}
+			}
+			*/
 						
 			//método para ingresar numero al arreglo
 			secreto.push(numeroAleatorio);
@@ -43,6 +49,7 @@
 	  if(parseInt(input.value) == secreto[posicion]){
 	    	  alert("Usted Acertó")
 		  encontrado = true;
+	  	  secreto=sorteaNum(4)
 		  break; //si encuentra valor ya no necesito validar los demas numeros del arreglo
   	  }
 	 }
@@ -53,12 +60,9 @@
 
 	  input.value = " " //borra el valor insertado cada vez se completa la función
 	  input.focus(); //permite focalizar el cursor en la caja de input
-	  console.log(secreto)
-	 
 	}
 	var boton = document.querySelector("button");
 	boton.onclick = verificar;
-
 </script>
 
 
