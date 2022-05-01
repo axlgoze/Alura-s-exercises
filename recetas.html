@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<!--Programa para crear recetas agregando ingredientes a un arreglo -->
+<h1>Recetas de Axel</h1>
+
+<script>
+
+    var ingredientes = [];
+    var cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
+    var contador = 1;
+
+    while( contador <= cantidad) {
+        var ingrediente = prompt("Informe el ingrediente " + contador);
+        ingredientes.push(ingrediente);
+        contador++;
+    }
+
+    console.log(ingredientes);
+
+</script>
+
+<style>
+html{
+	background-color: #125B50;
+	color: #F8B400;
+    }
+</style>
