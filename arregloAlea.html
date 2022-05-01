@@ -22,7 +22,7 @@
 			var numeroAleatorio = aleatorio();
 			console.log(numeroAleatorio);
 			var encontrado=false;
-
+		  if(numeroAleatorio != 0){ //condicion para agregar ceros al arreglo
 			for(var posicion=0;posicion<secreto.length;posicion++){
 				if(numeroAleatorio==secreto[posicion]){
 					encontrado = true;
@@ -35,7 +35,7 @@
 				secreto.push(numeroAleatorio)
 				contador++;
 			}
-
+		  }
 		}
 		//regresa arreglo lleno
 		console.log(secreto)
