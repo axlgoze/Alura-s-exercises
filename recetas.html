@@ -3,15 +3,26 @@
 <h1>Recetas de Axel</h1>
 
 <script>
-
+    function isPresent(array,value){
+    	return array.some((ele) =>{
+		resturn value == ele;
+	});
+    }
     var ingredientes = [];
     var cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
     var contador = 1;
 
     while( contador <= cantidad) {
         var ingrediente = prompt("Informe el ingrediente " + contador);
-        ingredientes.push(ingrediente);
-        contador++;
+	var econtrado=false;
+	/*ciclo para identificar valores repetidos
+	for(var posicion=0;posicion<=ingrediente.length;posicion++){ //recorrido de arreglo
+	}*/
+	if(ingrediente!=isPresent()){
+	     ingredientes.push(ingrediente);
+	     contador++;
+	}
+
     }
 
     console.log(ingredientes);
