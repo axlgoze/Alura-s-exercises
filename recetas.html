@@ -3,9 +3,9 @@
 <h1>Recetas de Axel</h1>
 
 <script>
-    function isPresent(array,value){
-    	return array.some((ele) =>{
-		resturn value == ele;
+    function isPresent(ingredientes,value){
+    	return ingredientes.some((ele) =>{
+		return value === ele;
 	});
     }
     var ingredientes = [];
@@ -14,14 +14,21 @@
 
     while( contador <= cantidad) {
         var ingrediente = prompt("Informe el ingrediente " + contador);
-	var econtrado=false;
-	/*ciclo para identificar valores repetidos
-	for(var posicion=0;posicion<=ingrediente.length;posicion++){ //recorrido de arreglo
-	}*/
-	if(ingrediente!=isPresent()){
-	     ingredientes.push(ingrediente);
-	     contador++;
-	}
+	var encontrado=false;
+		//ciclo para recorrer el arreglo
+		for(var posicion=0;posicion<ingredientes.length;posicion++){
+			//comprueba si el ingrediente esta repetido
+			if(ingrediente==ingredientes[posicion]){
+				encontrado= true;
+				alert("Ingrediente repetido por favor ingresa otro")
+				break;	//si true no verifica las demas posiciones que falten
+			}
+		}
+		
+		if(encontrado==false){
+			ingredientes.push(ingrediente)
+			contador++			
+		}
 
     }
 
