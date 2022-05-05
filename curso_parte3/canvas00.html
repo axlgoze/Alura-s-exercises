@@ -10,13 +10,24 @@
 	var pincel = pantalla.getContext("2d") //Contexto de dibujo de dos dimensiones
 
 	pincel.fillStyle = "green" //propiedad
-	pincel.fillRect(0,0,200,400) //LLena rectangulo:punto de inicio,eje Y, eje X
+	pincel.fillRect(0,0,200,400) //funcion
 	
-	pincel.fillStyle = "white"
-	pincel.fillRect(200,0,400,400) 
+	pincel.fillStyle = "lightgrey"
+	pincel.fillRect(200,0,400,400) //LLena rectangulo:punto de inicio,eje Y, eje X 
 	
 	pincel.fillStyle = "red"
 	pincel.fillRect(400,0,200,400) //x,y,grafica 200 en x,400 en y
+
+	//modificaicones a la bandera
+	pincel.fillStyle = "yellow"
+	pincel.beginPath() //inicia un nuevo camino para pintando
+	pincel.moveTo(300,200) //pincel posicionado
+	pincel.lineTo(200,400) //una vez posicionado dibuja linea
+	pincel.lineTo(400,400)
+	pincel.lineTo(300,200)
+	pincel.fill() //Llena area dibujada
+
+
 
 </script>
 
