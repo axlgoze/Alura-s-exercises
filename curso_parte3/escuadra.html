@@ -3,4 +3,11 @@
 <script>
 	var pantalla = document.querySelector("canvas")
 	var pincel = pantalla.getContext("2d")
+
+	//iniciando trazado de triangulo
+	pincel.fillStyle="gold"
+	pincel.beginPath()
+	pincel.moveTo(50,50) //posicionandose
+	pincel.lineTo(50,400) //linea
+	pincel.fill();
 </script>
