@@ -1,4 +1,4 @@
-<!-- Aprendiendo a usar CANVAS-->
+}<!-- Aprendiendo a usar CANVAS-->
 <!--<meta charset = "UTF-8"> -->
 <canvas width="600" height="400"> <!-- Elemento para dibujar gráficos usando scripts-->
 
@@ -8,8 +8,16 @@
 <script>
 	var pantalla = document.querySelector("canvas")  //Conecta elementos HTML con JS
 	var pincel = pantalla.getContext("2d") //Contexto de dibujo de dos dimensiones
-	pincel.fillStyle = "lightgrey" //propiedad
+
+	pincel.fillStyle = "green" //propiedad
 	pincel.fillRect(0,0,600,400) //LLena rectangulo:punto de inicio,eje Y, eje X
+	
+	pincel.fillStyle = "white"
+	pincel.fillRect(0,0,200,400) 
+
+	pincel.fillStyle = "red"
+	pincel.fillRect(400,0,200,400) //x,y,grafica 200 en x,400 en y
+
 </script>
 
 
