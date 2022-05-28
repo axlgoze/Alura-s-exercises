@@ -1,39 +1,18 @@
 <canvas width="600" height="400"></canvas>
 <script>
-	function dibujarCuadradoVerde(x,y){
+	function dibujarCuadrado(x,y,colour){
 	        var pantalla = document.querySelector("canvas")
 		var pincel = pantalla.getContext("2d")
 	
-		pincel.fillStyle="green";
+		pincel.fillStyle=colour;
 
 		pincel.fillRect(x,y,50,50)
 		pincel.strokeStyle="black"; //color de borde
 		pincel.strokeRect(x,y,50,50) //ubicacion de borde, same coordinates
 	}
 
-	function dibujarCuadradoAmarillo(x,y){
-	        var pantalla = document.querySelector("canvas")
-		var pincel = pantalla.getContext("2d")
-	
-		pincel.fillStyle="yellow";
-
-		pincel.fillRect(x,y,50,50)
-		pincel.strokeStyle="black"; //color de borde
-		pincel.strokeRect(x,y,50,50) //ubicacion de borde, same coordinates
-	}
-
-function dibujarCuadradoRojo(x,y){
-	        var pantalla = document.querySelector("canvas")
-		var pincel = pantalla.getContext("2d")
-	
-		pincel.fillStyle="red";
-
-		pincel.fillRect(x,y,50,50)
-		pincel.strokeStyle="black"; //color de borde
-		pincel.strokeRect(x,y,50,50) //ubicacion de borde, same coordinates
-	}
-	dibujarCuadradoVerde(0,0);
-	dibujarCuadradoAmarillo(0,50);
-	dibujarCuadradoRojo(0,100);
+	dibujarCuadrado(0,0,"red");
+	dibujarCuadrado(0,50,"yellow");
+	dibujarCuadrado(0,100,"green");
 		
 </script>
