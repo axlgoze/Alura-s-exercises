@@ -14,14 +14,14 @@
         pincel.arc(x, y, radio, 0, 2*3.14);
         pincel.fill();
     }
-    function dibujarFlor(){
-    	dibujarCirculo(300,200,10,"blue");
-	dibujarCirculo(300,180,10,"red");
-    	dibujarCirculo(280,200,10,"gold");
-    	dibujarCirculo(320,200,10,"teal");
-    	dibujarCirculo(300,220,10,"pink");	
+    function dibujarFlor(x,y){
+    	dibujarCirculo(x,y,10,"blue");
+	dibujarCirculo(x,y-20,10,"red");
+    	dibujarCirculo(x-20,y,10,"gold");
+    	dibujarCirculo(x+20,y,10,"teal");
+    	dibujarCirculo(x,y+20,10,"pink");	
     }
-    dibujarFlor();	
+    dibujarFlor(330,210);	
     
 </script>
 
