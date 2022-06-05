@@ -1,0 +1,19 @@
+<canvas width="600" height="400"></canvas>
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    pincel.fillStyle = "grey";
+    pincel.fillRect(0,0,600,400);
+    function muestraAlerta(evento){
+	//almacena las coordenadas
+	var x = evento.pageX;
+	var y = evento.pageY;
+
+	console.log(evento);
+        alert(x+","+y);
+    }
+    //cuando mando a llamar la funcion con la propiedad con onclick no necesito el '()'
+    pantalla.onclick = muestraAlerta;
+
+</script>
