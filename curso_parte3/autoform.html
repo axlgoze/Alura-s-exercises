@@ -12,9 +12,14 @@
 	  pincel.arc(x,y,29,0,2*Math.PI); //params: coordenadasXY,radio,angulo inicial,2PI
 	  pincel.fill();
     }
+    
+    function limpiarPantall(){
+    	pincel.clearRect(0,0,600,400);
+    }
 
     for(x=20;x<600;x++){
-	    creaCircunferencia(x,20,10,"red");    	
+	
+	    creaCircunferencia(x,20,10,"blue");    	
     }
 
 </script>
