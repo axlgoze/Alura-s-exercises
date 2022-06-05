@@ -1,5 +1,5 @@
 <canvas width="600" height="400"> </canvas>
-
+<button onclick="addColor();" style="margin-top: 12px">Agrega un nuevo color</button>
 <script>
 
     var pantalla = document.querySelector("canvas");
@@ -32,6 +32,12 @@
         return false; //regresar valor de array despues de recorrer
     }
 
+    function addColor(newColor){
+	var newColour = prompt("Ingresa nuevo color");
+	colores.push(newColour);
+    }
+
     pantalla.oncontextmenu = alterarColor;
+//    addColor("gold");
 
 </script> 
