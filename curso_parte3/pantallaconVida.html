@@ -2,18 +2,31 @@
 <script>
     var pantalla = document.querySelector("canvas");
     var pincel = pantalla.getContext("2d");
+    var colores = ["blue","green","yellow", "red","gray"];
 
     pincel.fillStyle = "grey";
     pincel.fillRect(0,0,600,400);
     function muestraAlerta(evento){
 	//almacena las coordenadas
-	var x = evento.pageX;
-	var y = evento.pageY;
+	var x = evento.pageX - pantalla.offsetLeft; //resta lo que sobra
+	var y = evento.pageY - pantalla.offsetTop;
 
 	console.log(evento);
         alert(x+","+y);
     }
+
+    function dibujarCirculo(evento){
+	var x = evento.pageX - pantalla.offsetLeft;
+	var y = evento.pageY - pantalla.offsetTop;
+
+        pincel.fillStyle = colores[3];
+        pincel.beginPath();
+	pincel.arc(x,y,10,0,2*3.1416);
+	pincel.fill();
+	console.log(x+","+y);
+
+    }
     //cuando mando a llamar la funcion con la propiedad con onclick no necesito el '()'
-    pantalla.onclick = muestraAlerta;
+    pantalla.onclick = dibujarCirculo;
 
 </script>
