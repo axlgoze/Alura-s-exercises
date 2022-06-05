@@ -6,14 +6,15 @@
     pincel.fillStyle = "lightgrey";
     pincel.fillRect(0,0,600,400);
 
-    function creaCircunferencia(evento){
-	  var x = evento.pageX - pantalla.offsetLeft;
-          var y = evento.pageY - pantalla.offsetTop;
-          pincel.fillStyle="red";
+    function creaCircunferencia(x,y,radio,color){
+          pincel.fillStyle=color;
 	  pincel.beginPath();
-	  pincel.arc(x,y,20,0,2*Math.PI); //params: coordenadasXY,radio,angulo inicial,2PI
+	  pincel.arc(x,y,29,0,2*Math.PI); //params: coordenadasXY,radio,angulo inicial,2PI
 	  pincel.fill();
     }
-    pantalla.onclick = creaCircunferencia;
-//    creaCircunferencia(20,"red");
+
+    for(x=20;x<600;x++){
+	    creaCircunferencia(x,20,10,"red");    	
+    }
+
 </script>
