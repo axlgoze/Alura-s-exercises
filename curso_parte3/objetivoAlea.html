@@ -25,7 +25,8 @@
     var x=0;
     function actualizarPantalla(){
         limpiarPantalla();
-        creaCircunferencia(x,100,5,"gold");
+//        creaCircunferencia(x,100,5,"gold");
+	setnumbersAndDraw();
         x++;
     }
 
@@ -39,9 +40,14 @@
            return Math.floor(Math.random()*maximo);
       }
 
-
+      function setnumbersAndDraw(){
       xAlea=sorteaPosition(600);
       yAlea=sorteaPosition(400);
-
       diseñaObjetivo(xAlea,yAlea);
+      }
+
+//setnumbersAndDraw();
+setInterval(actualizarPantalla,1000) 
+
+
 </script>
