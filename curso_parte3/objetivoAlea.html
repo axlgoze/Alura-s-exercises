@@ -30,9 +30,18 @@
     }
 
 
+      function diseñaObjetivo(x,y){
+          creaCircunferencia(x,y,radio+20,"red")
+          creaCircunferencia(x,y,radio+10,"white")
+          creaCircunferencia(x,y,radio,"red")
+      }
+      function sorteaPosition(maximo){
+           return Math.floor(Math.random()*maximo);
+      }
 
-//    setInterval(actualizarPantalla,60); //second param is for miliseconds
-      creaCircunferencia(100,100,radio+20,"red")
-      creaCircunferencia(100,100,radio+10,"white")
-      creaCircunferencia(100,100,radio,"red")
+
+      xAlea=sorteaPosition(600);
+      yAlea=sorteaPosition(400);
+
+      diseñaObjetivo(xAlea,yAlea);
 </script>
