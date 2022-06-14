@@ -7,6 +7,9 @@
     pincel.fillRect(0,0,600,400);
 
     var radio=10;
+    var xAlea;
+    var yAlea;
+
 
     function creaCircunferencia(x,y,radio,color){
           pincel.fillStyle=color;
@@ -45,9 +48,24 @@
       yAlea=sorteaPosition(400);
       diseñaObjetivo(xAlea,yAlea);
       }
+      
+      function getCoordenadas(evento){
+      	var x= evento.pageX - pantalla.offsetLeft;
+      	var y= evento.pageY - pantalla.offsetTop;
+		console.log(x+","+y);
+	//rango de valores para tiro certero
+	if((x< xAlea + radio) &&
+          (x> xAlea - radio) &&
+          (y< yAlea + radio) &&
+          (y> yAlea - radio)){
+		console.log(x+","+y);
+		alert("Tiro certero");
+	}
+
+      }
 
 //setnumbersAndDraw();
-setInterval(actualizarPantalla,4000) 
-
+setInterval(actualizarPantalla,6000) 
+pantalla.onclick = getCoordenadas;
 
 </script>
