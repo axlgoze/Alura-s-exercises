@@ -55,10 +55,15 @@
 	var x= evento.pageX - pantalla.offsetLeft;
       	var y= evento.pageY - pantalla.offsetTop;
 	console.log(x+","+y);
-	if(x < 60&&y<60){
-		console.log("Amarillo");
-
-	}
+	if(x < 60 && y<60){
+            console.log("Amarillo");
+	}else if(x > 60 && x<120 && y<60){
+	     console.log("Verde");
+	 }else if(x > 120 && x<180 && y<60){
+	     console.log("Azul");
+	 }else if(x > 180 && x<240 && y<60){
+	     console.log("Morado");
+	 }
 	    	
     }
 
