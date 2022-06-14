@@ -1,5 +1,5 @@
 <canvas width="600" height="400"></canvas>
-
+<button style=margin-top:30px onclick="limpiarPantalla()">limpiar pizarra</button>
 <script>
     var pantalla = document.querySelector('canvas');
     var pincel = pantalla.getContext('2d');
@@ -8,18 +8,14 @@
     pincel.fillRect(0, 0, 600, 400);
 
     var puedoDibujar = false;
-    var a=60;
-    var b=120;
-    var c=180;
-    var d=240;
-
+    var colour="red"
 
     function dibujarCirculo(evento) {
 
         if(puedoDibujar) {
             var x = evento.pageX - pantalla.offsetLeft;
             var y = evento.pageY - pantalla.offsetTop;
-            pincel.fillStyle = 'blue';
+            pincel.fillStyle = colour;
             pincel.beginPath();
             pincel.arc(x, y, 5, 0, 2 * 3.14);
             pincel.fill();
@@ -57,16 +53,28 @@
 	console.log(x+","+y);
 	if(x < 60 && y<60){
             console.log("Amarillo");
+	    colour="#F7EC09";
 	}else if(x > 60 && x<120 && y<60){
 	     console.log("Verde");
+	     colour="#3EC70B"
 	 }else if(x > 120 && x<180 && y<60){
 	     console.log("Azul");
+	     colour="#3B44F6"
 	 }else if(x > 180 && x<240 && y<60){
 	     console.log("Morado");
+	     colour="#A149FA"
 	 }
 	    	
     }
 
+    function limpiarPantalla(){
+
+        pincel.clearRect(0,0,600,400);
+	pincel.fillStyle = 'lightgrey';
+        pincel.fillRect(0, 0, 600, 400);
+	creaPaleta();
+
+    }
 
     pantalla.onmousedown = habilitarDibujar;
 
@@ -74,4 +82,3 @@
     pantalla.onclick = getColor;
     creaPaleta();
 </script>
-	
