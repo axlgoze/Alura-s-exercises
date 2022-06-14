@@ -8,7 +8,11 @@
     pincel.fillRect(0, 0, 600, 400);
 
     var puedoDibujar = false;
-    var a,b,c,d;
+    var a=60;
+    var b=120;
+    var c=180;
+    var d=240;
+
 
     function dibujarCirculo(evento) {
 
@@ -47,16 +51,13 @@
 	pincel.fillRect(180,0,60,60)
     }
    
-    getColor(evento){
+    function getColor(evento){
 	var x= evento.pageX - pantalla.offsetLeft;
       	var y= evento.pageY - pantalla.offsetTop;
 	console.log(x+","+y);
-	if((x< xAlea + radio) &&
-          (x> xAlea - radio) &&
-          (y< yAlea + radio) &&
-          (y> yAlea - radio)){
-		console.log(x+","+y);
-		alert("Tiro certero");
+	if(x < 60&&y<60){
+		console.log("Amarillo");
+
 	}
 	    	
     }
@@ -65,6 +66,7 @@
     pantalla.onmousedown = habilitarDibujar;
 
     pantalla.onmouseup = deshabilitarDibujar;
+    pantalla.onclick = getColor;
     creaPaleta();
 </script>
 	
