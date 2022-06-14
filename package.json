@@ -4,9 +4,9 @@
   "description": "ejercicios de Alura",
   "main": "index.js",
   "scripts": {
-  "linter": "node ./node_modules/eslint/bin/eslint.js .",
-  "linter-fix": "node ./node_modules/eslint/bin/eslint.js . --fix",
-  "test": "jest"
+    "linter": "node ./node_modules/eslint/bin/eslint.js .",
+    "linter-fix": "node ./node_modules/eslint/bin/eslint.js . --fix",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
